@@ -13,15 +13,9 @@ A blank project including special blocks to interact with the Vision Bonnet in y
   Name it whatever you like, instead of `my_project`, these instructions will assume that you used `aiy_kit` for the project name
   
   `cd aiy_kit`  
-  This is the root of your project directory. From here nio can be started by running `niod`, but it will stop running as soon as you close the window or press ctrl-C. Run `sudo ./setup_nio.sh` to stop and disable the Joy Detection demo, and optionally create a system service to start nio automatically (in the background) with your RaspberryPi. While this is not required, only one application has access to the Vision Bonnet at a time so you will need to make sure it is available to use the included blocks.
+  This is the root of your project directory. From here nio can be started by running `niod`, but it will stop running as soon as you close the window or press ctrl-C. Run `sudo ./setup_nio.sh` to stop and disable the Joy Detection demo, and optionally create a systemd service to start nio automatically (in the background) with your RaspberryPi. While this is not required, only one application has access to the Vision Bonnet at a time so you will need to make sure it is available to use the included blocks.
 
-### The nio System Service
+### The systemd Service
 
-If you run `setup_nio.sh` and create a system service to start with your Pi, the following commands can be used to start or stop your instance. The name of the service will match the project's directory name, in thie case `aiy_kit`   
-`systemctl start aiy_kit`  
-`systemctl stop aiy_kit`  
-To revert these changes:  
-`systemctl stop aiy_kit`  
-`systemctl disable aiy_kit`  
-`systemctl enable joy_detection_demo`  
-`systemctl start joy_detection_demo`  
+If you run `setup_nio.sh` from your project's root directory, and create a system service to start with your Pi, the name of the service will match the project's directory name, in this case `aiy_kit`   
+`systemctl start|stop|enable|disable aiy_kit`  
