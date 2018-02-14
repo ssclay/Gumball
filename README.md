@@ -7,13 +7,12 @@ A blank project including special blocks to interact with the Vision Bonnet in y
   After [installing nio](https://docs.n.io/installation/) to your RaspberryPi, create a new directory for your nio project(s):  
   `mkdir -p nio/projects && cd nio/projects`
   
-  Use the Command Line Interface that was installed for you alongside nio to create a new project from this template:  
-  `nio new my_project -t demo_aiy`  
-  You can name your project whatever you like, but let's assume that you name it `demo_aiy` instead of `my_project`.  
+  Use the Command Line Interface that was installed alongside nio to create a new project:  
+  `nio new demo_aiy -t demo_aiy`    
   `cd demo_aiy`  
-  This is the root of your project directory. From here nio can be started by running `niod`, but it will stop running as soon as you close the window or press ctrl-C. Run `sudo ./setup_nio.sh` to stop and disable the Joy Detection demo, and optionally create a systemd service to start nio automatically (in the background) with your RaspberryPi. While this is not required, only one application has access to the Vision Bonnet at a time so you will need to make sure it is available to use the included blocks.
-
-### The systemd Service
-
-If you run `setup_nio.sh` from your project's root directory, and create a system service to start with your Pi, the name of the service will match the project's directory name, in this case `demo_aiy`   
+  This is the root of your project directory. From here nio can be started by running `niod`, but it will stop running as soon as you close the window or press ctrl-C.
+  
+  For convenience this template includes a bash script to configure systemd services on your Pi. Run `sudo ./setup_nio.sh` to stop and disable the Joy Detection demo, and create a systemd service to start nio automatically (in the background) with your RaspberryPi. While this step is not required, only one application has access to the Vision Bonnet at a time so you will need to make sure it is available to use the included blocks.
+  
+  The systemd service can be controlled with the following commands:
 `systemctl start|stop|enable|disable demo_aiy`  
