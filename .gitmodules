@@ -33,4 +33,4 @@
 	url = git://github.com/nio-blocks/join.git
 [submodule "blocks/aiy_demos"]
 	path = blocks/aiy_demos
-	url = git@github.com:tyoungNIO/aiy_demos.git
+	url = git://github.com/tyoungNIO/aiy_demos.git
