@@ -14,5 +14,5 @@ A blank project including special blocks to interact with the Vision Bonnet in y
   
   For convenience this template includes a bash script to configure systemd services on your Pi. Run `sudo ./setup_nio.sh` to stop and disable the Joy Detection demo, and create a systemd service to start nio automatically (in the background) with your RaspberryPi. While this step is not required, only one application has access to the Vision Bonnet at a time so you will need to make sure it is available to use the included blocks.
   
-  The systemd service can be controlled with the following commands:
+  The systemd service can be controlled with the following commands:  
 `systemctl start|stop|enable|disable demo_aiy`  
