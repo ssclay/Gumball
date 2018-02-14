@@ -8,7 +8,8 @@ A blank project including special blocks to interact with the Vision Bonnet in y
   `mkdir -p nio/projects && cd nio/projects`
   
   Use the Command Line Interface that was installed for you alongside nio to create a new project from this template:  
-  `nio new -t demo_aiy`  
+  `nio new my_project -t demo_aiy`  
+  You can name your project whatever you like, but let's assume that you name it `demo_aiy` instead of `my_project`.  
   `cd demo_aiy`  
   This is the root of your project directory. From here nio can be started by running `niod`, but it will stop running as soon as you close the window or press ctrl-C. Run `sudo ./setup_nio.sh` to stop and disable the Joy Detection demo, and optionally create a systemd service to start nio automatically (in the background) with your RaspberryPi. While this is not required, only one application has access to the Vision Bonnet at a time so you will need to make sure it is available to use the included blocks.
 
