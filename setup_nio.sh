@@ -12,14 +12,15 @@ After=network.target
 
 [Service]
 WorkingDirectory=/home/pi/nio/projects/demo_aiy
-ExecStart=/usr/local/bin/niod
+ExecStart=/home/pi/.local/bin/niod
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
+User=pi
 #Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target' > demo_aiy.service
-sudo mv demo_aiy.service /etc/systemd/system/.
+sudo mv demo_aiy.service /lib/systemd/system/.
 
 echo "Starting nio"
 sudo systemctl daemon-reload
